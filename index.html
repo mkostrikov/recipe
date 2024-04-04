@@ -176,6 +176,28 @@
             display: flex;
             flex-direction: column;
             gap: 0.8rem;
+            list-style-position: inside;
+        }
+
+        .list--unordered .list__item::marker {
+            content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='24'><circle cx='10' cy='18' r='2' fill='%237a284e' /></svg>");
+        }
+
+        .list--ordered .list__item::marker {
+            font-family: var(--font-outfit-bold);
+            font-weight: 700;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: var(--brandy-red);
+        }
+
+        .list__text {
+            padding-inline-start: 1.6rem;
+            font-family: var(--font-outfit-regular);
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: var(--wenge-brown);
         }
 
         .table {
@@ -191,10 +213,6 @@
             font-size: 1.6rem;
             line-height: 1.5;
             color: var(--wenge-brown);
-        }
-
-        .table__body {
-            padding-inline: 3.2rem;
         }
 
         .table__row {
@@ -220,6 +238,10 @@
             padding-block-end: 0;
         }
 
+        .table__item:nth-child(odd) {
+            padding-inline-start: 3.2rem;
+        }
+
         .table__item:nth-child(even) {
             font-family: var(--font-outfit-bold);
             font-weight: 700;
@@ -235,9 +257,9 @@
             <img
                     class="img"
                     src="./assets/images/image-omelette_400.webp"
-                    alt="Omelet filled with sautéed greens and mushrooms, served with a side of seasoned tomato sauce on a white plate."
-                    width="800"
-                    height="366"
+                    alt="Omelet filled with sauteed greens and mushrooms, served with a side of seasoned tomato sauce on a white plate."
+                    width="400"
+                    height="183"
                     fetchpriority="high"
                     srcset="./assets/images/image-omelette_800.webp 2x"
                     sizes="
@@ -260,15 +282,21 @@
                 <h2 class="h2 h2--sm h2--font-outfit-600">
                     Preparation time
                 </h2>
-                <ul class="list">
-                    <li class="list__item p">
-                        <b>Total</b>: Approximately 10 minutes
+                <ul class="list list--unordered">
+                    <li class="list__item">
+                        <span class="list__text">
+                            <b>Total</b>: Approximately 10 minutes
+                        </span>
                     </li>
-                    <li class="list__item p">
-                        <b>Preparation</b>: 5 minutes
+                    <li class="list__item">
+                        <span class="list__text">
+                            <b>Preparation</b>: 5 minutes
+                        </span>
                     </li>
-                    <li class="list__item p">
-                        <b>Cooking</b>: 5 minutes
+                    <li class="list__item">
+                        <span class="list__text">
+                            <b>Cooking</b>: 5 minutes
+                        </span>
                     </li>
                 </ul>
             </section>
@@ -276,21 +304,31 @@
                 <h2 class="h2">
                     Ingredients
                 </h2>
-                <ul class="list">
-                    <li class="list__item p">
-                        2-3 large eggs
+                <ul class="list list--unordered">
+                    <li class="list__item">
+                        <span class="list__text">
+                            2-3 large eggs
+                        </span>
                     </li>
-                    <li class="list__item p">
-                        Salt, to taste
+                    <li class="list__item">
+                        <span class="list__text">
+                            Salt, to taste
+                        </span>
                     </li>
-                    <li class="list__item p">
-                        Pepper, to taste
+                    <li class="list__item">
+                        <span class="list__text">
+                            Pepper, to taste
+                        </span>
                     </li>
-                    <li class="list__item p">
-                        1 tablespoon of butter or oil
+                    <li class="list__item">
+                        <span class="list__text">
+                            1 tablespoon of butter or oil
+                        </span>
                     </li>
-                    <li class="list__item p">
-                        Optional fillings: cheese, diced vegetables, cooked meats, herbs
+                    <li class="list__item">
+                        <span class="list__text">
+                            Optional fillings: cheese, diced vegetables, cooked meats, herbs
+                        </span>
                     </li>
                 </ul>
             </section>
@@ -298,36 +336,40 @@
                 <h2 class="h2">
                     Instructions
                 </h2>
-                <ol class="list">
-                    <li class="list__item p">
-                        <b>Beat the eggs</b>: In a bowl, beat the eggs with a pinch of salt and pepper until they are
-                        well
-                        mixed.
-                        You can add a tablespoon of water or milk for a fluffier texture.
+                <ol class="list list--ordered">
+                    <li class="list__item">
+                        <span class="list__text">
+                            <b>Beat the eggs</b>: In a bowl, beat the eggs with a pinch of salt and pepper until they are
+                            well mixed. You can add a tablespoon of water or milk for a fluffier texture.
+                        </span>
                     </li>
-                    <li class="list__item p">
-                        <b>Heat the pan</b>: Place a non-stick frying pan over medium heat and add butter or oil.
+                    <li class="list__item">
+                        <span class="list__text">
+                            <b>Heat the pan</b>: Place a non-stick frying pan over medium heat and add butter or oil.
+                        </span>
                     </li>
-                    <li class="list__item p">
-                        <b>Cook the omelette</b>: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan
-                        to
-                        ensure
-                        the eggs evenly coat the surface.
+                    <li class="list__item">
+                        <span class="list__text">
+                            <b>Cook the omelette</b>: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan
+                            to ensure the eggs evenly coat the surface.
+                        </span>
                     </li>
-                    <li class="list__item p">
-                        <b>Add fillings (optional)</b>: When the eggs begin to set at the edges but are still slightly
-                        runny
-                        in the
-                        middle, sprinkle your chosen fillings over one half of the omelette.
+                    <li class="list__item">
+                        <span class="list__text">
+                            <b>Add fillings (optional)</b>: When the eggs begin to set at the edges but are still slightly
+                            runny in the middle, sprinkle your chosen fillings over one half of the omelette.
+                        </span>
                     </li>
-                    <li class="list__item p">
-                        <b>Fold and serve</b>: As the omelette continues to cook, carefully lift one edge and fold it
-                        over
-                        the
-                        fillings. Let it cook for another minute, then slide it onto a plate.
+                    <li class="list__item">
+                        <span class="list__text">
+                            <b>Fold and serve</b>: As the omelette continues to cook, carefully lift one edge and fold it
+                            over the fillings. Let it cook for another minute, then slide it onto a plate.
+                        </span>
                     </li>
-                    <li class="list__item p">
-                        <b>Enjoy</b>: Serve hot, with additional salt and pepper if needed.
+                    <li class="list__item">
+                        <span class="list__text">
+                            <b>Enjoy</b>: Serve hot, with additional salt and pepper if needed.
+                        </span>
                     </li>
                 </ol>
             </section>
